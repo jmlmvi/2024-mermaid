@@ -1,0 +1,6 @@
+[submodule "mermaid-ink"]
+	path = mermaid-ink
+	url = https://github.com/jihchi/mermaid.ink
+[submodule "mermaid-live-editor"]
+	path = mermaid-live-editor
+	url = https://github.com/mermaid-js/mermaid-live-editor
