@@ -37,7 +37,7 @@ services:
 
   mermaid-live:
     build:
-      context: ./mermaid-live-editor
+      context: ./mermaid-live-editor/
       target: mermaid-dev
     volumes:
       - ./src:/app/src
