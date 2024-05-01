@@ -37,6 +37,7 @@ services:
 
   mermaid-live:
     build:
+      dockerfile: Dockerfile  # Nom du Dockerfile (optionnel si nommé 'Dockerfile')
       context: ./mermaid-live-editor/
       target: mermaid-dev
     volumes:
