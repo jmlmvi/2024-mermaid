@@ -35,19 +35,6 @@ services:
     environment:
       - NODE_OPTIONS=--max-http-header-size=102400000
 
-  mermaid-live:
-    build:
-      context: ./mermaid-live-editor
-      target: mermaid-dev
-    volumes:
-      - ./src:/app/src
-    ports:
-      - 3000:3000
-      - 24678:24678
-    environment:
-      MERMAID_RENDERER_URL: "http://localhost:4000"
-      MERMAID_KROKI_RENDERER_URL: "http://localhost:8002"
-
 
   mermaid-live-editor:
     image: ghcr.io/mermaid-js/mermaid-live-editor
