@@ -1,6 +1,6 @@
 version: "3.8"
 services:
-  core:
+  kroki:
     image: yuzutech/kroki
     environment:
       - KROKI_MERMAID_HOST=mermaid
