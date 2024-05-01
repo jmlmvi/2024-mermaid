@@ -4,3 +4,6 @@
 [submodule "mermaid-live-editor"]
 	path = mermaid-live-editor
 	url = https://github.com/mermaid-js/mermaid-live-editor
+[submodule "kroki"]
+	path = kroki
+	url = https://github.com/yuzutech/kroki
