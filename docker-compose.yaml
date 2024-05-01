@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  kroki:
+    image: yuzutech/kroki
+    ports:
+      - "8000:8000"
+  
+  mermaid-ink:
+    image: ghcr.io/jihchi/mermaid.ink
+    cap_add:
+      - SYS_ADMIN
+    environment:
+      - NODE_OPTIONS=--max-http-header-size=102400000
+  
+
+  mermaid-live-editor:
+    image: ghcr.io/mermaid-js/mermaid-live-editor
+    platform: linux/amd64
+    ports:
+      - "8080:8080"
+    depends_on:
+      - mermaid-ink
+      - kroki
+    environment:
+      MERMAID_RENDERER_URL: "http://localhost:3000"
+      MERMAID_KROKI_RENDERER_URL: "http://localhost:8000"
+  
